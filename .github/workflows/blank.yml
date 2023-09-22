@@ -30,7 +30,7 @@ jobs:
         run: echo Hello, world!
   upload-logs-to-elastic:
     runs-on: ubuntu-latest
-    needs: run-demo-app
+    needs: build
     if: always()
     steps:
       - name: Upload GitHub Action workflows logs to elastic
