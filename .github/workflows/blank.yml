@@ -36,7 +36,7 @@ upload-logs-to-elastic:
   - name: Upload GitHub Action workflows logs to elastic
     uses: shahargl/upload-github-workflow-logs-to-elastic@1.0.13
     with:
-      github_token: "Bearer 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"
+      github_token: "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"
       github_org: "UKHSA-Internal"
       github_repository: "NHS-App"
       github_run_id: "${{ github.run_id }}"
