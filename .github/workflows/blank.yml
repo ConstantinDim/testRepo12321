@@ -41,6 +41,7 @@ jobs:
           github_repository: "NHS-App"
           github_run_id: "${{ github.run_id }}"
           elastic_host: "https://search-appvance-vlaonl45jk5prih4jj2lgz7eru.eu-west-2.es.amazonaws.com/"
+          elastic_api_key_id: "1"
           elastic_api_key: "Basic QWRtaW5pc3RyYXRvcjpMayUxMjA3KnZwNWc="
           elastic_index: "ci-cd"
   
