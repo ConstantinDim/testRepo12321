@@ -32,20 +32,20 @@ jobs:
     runs-on: ubuntu-latest
     needs: run-demo-app
     if: always()
-    steps:
-    - name: Upload GitHub Action workflows logs to elastic
-      uses: shahargl/upload-github-workflow-logs-to-elastic@1.0.13
-      with:
-        github_token: "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"
-        github_org: "UKHSA-Internal"
-        github_repository: "NHS-App"
-        github_run_id: "${{ github.run_id }}"
-        elastic_host: "https://search-appvance-vlaonl45jk5prih4jj2lgz7eru.eu-west-2.es.amazonaws.com/"
-        elastic_api_key: "Basic QWRtaW5pc3RyYXRvcjpMayUxMjA3KnZwNWc="
-        elastic_index: "ci-cd"
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      steps:
+      - name: Upload GitHub Action workflows logs to elastic
+        uses: shahargl/upload-github-workflow-logs-to-elastic@1.0.13
+        with:
+          github_token: "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"
+          github_org: "UKHSA-Internal"
+          github_repository: "NHS-App"
+          github_run_id: "${{ github.run_id }}"
+          elastic_host: "https://search-appvance-vlaonl45jk5prih4jj2lgz7eru.eu-west-2.es.amazonaws.com/"
+          elastic_api_key: "Basic QWRtaW5pc3RyYXRvcjpMayUxMjA3KnZwNWc="
+          elastic_index: "ci-cd"
+  
+        # Runs a set of commands using the runners shell
+        - name: Run a multi-line script
+          run: |
+            echo Add other actions to build,
+            echo test, and deploy your project.
